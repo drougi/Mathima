@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class orthogwnio {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        double x;
+        double y;
+
+        int q;
+        System.out.print("grapse 1 gia akeraious kai 2 gia pragmatikous arithmous");
+        q = input.nextInt();
+        if (q == 1) {
+            System.out.println("grapse timi gia x");
+            x = input.nextDouble();
+            if (is_whole(x)) {
+                System.out.println("grapse timi gia y");
+                y = input.nextDouble();
+                if (is_whole(y)) {
+                    System.out.println("embadon=" + x * y);
+                    System.out.println(" perimetros=" + 2 * (x + y));
+                } else {
+                    System.out.println("lathos aritmos y");
+                }
+            } else {
+                System.out.println("lathos aritmos x");
+
+            }
+
+
+        } else if (q == 2) {
+            System.out.println("grapse timi gia x");
+            x = input.nextDouble();
+            System.out.println("grapse timi gia y");
+            y = input.nextDouble();
+            System.out.println("embadon=" + x * y);
+            System.out.println(" perimetros=" + 2 * (x + y));
+        } else {
+            System.out.println("lathos epilogi arithmou");
+        }
+
+
+    }
+
+    private static boolean is_whole(double x) {
+        if (x == (int) x) {
+            return true;
+        }
+        return false;
+    }
+
+
+}
+
